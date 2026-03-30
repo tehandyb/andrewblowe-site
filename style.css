@@ -232,7 +232,7 @@ h1 {
   border-color: #0f1117;
   transform: scale(1.25);
   transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
-  animation: dot-pulse 1.5s ease-in-out 2 forwards;
+  animation: dot-pulse 3s ease-in-out 1 forwards;
 }
 
 @keyframes dot-pulse {
