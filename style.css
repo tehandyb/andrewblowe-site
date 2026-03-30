@@ -131,6 +131,30 @@ nav {
   margin-top: 28px;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.social-link {
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s;
+}
+
+.social-link:hover {
+  color: #2d9ea9;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
 .btn {
   font-family: 'Jura', sans-serif;
   font-size: 0.9rem;
