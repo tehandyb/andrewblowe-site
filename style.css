@@ -105,8 +105,9 @@ nav {
   display: inline-block;
   background: #3b7fd8;
   padding: 10px 25px;
-  width: 140px;
+  width: 160px;
   text-align: center;
+  white-space: nowrap;
 }
 .back-btn:hover { background: #006eff; }
 

@@ -47,9 +47,9 @@ function createGallery(containerId, images, projectInfo) {
     descEl().textContent = image.caption;
   }
 
-  showThumbnails();
-
   galleryContainer.appendChild(imagesDiv);
   galleryContainer.appendChild(captionDiv);
   section.appendChild(galleryContainer);
+
+  showThumbnails();
 }
