@@ -233,6 +233,12 @@ h1 {
   transform: scale(1.25);
   box-shadow: 0 0 0 4px rgba(253,207,65,0.2), 0 0 14px rgba(253,207,65,0.5);
   transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(253,207,65,0.2), 0 0 10px rgba(253,207,65,0.4); }
+  50%       { box-shadow: 0 0 0 7px rgba(253,207,65,0.1), 0 0 20px rgba(253,207,65,0.6); }
 }
 
 .timeline-dot {
