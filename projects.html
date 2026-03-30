@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Andrew Blowe</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-item">home</a>
+    <a href="portfolio.html" class="nav-item">portfolio</a>
+    <a href="projects.html" class="nav-item active">projects</a>
+  </nav>
+
+  <!-- ── Pottery Wheel ──────────────────────────────────────────────── -->
+  <section class="clay-section">
+    <canvas id="clay-canvas"></canvas>
+
+    <div class="clay-hint">
+      Move mouse to position tool &nbsp;·&nbsp; Click to sculpt &nbsp;·&nbsp;
+      <kbd>R</kbd> reset &nbsp;·&nbsp; <kbd>S</kbd> smooth
+    </div>
+
+    <div class="clay-controls">
+      <button class="clay-btn active" data-mode="carve">Carve</button>
+      <button class="clay-btn" data-mode="expand">Expand</button>
+      <button class="clay-btn" id="btn-smooth">Smooth</button>
+      <button class="clay-btn" id="btn-reset">Reset</button>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="clay.js"></script>
+</body>
+</html>
