@@ -231,14 +231,14 @@ h1 {
   background: #fdcf41;
   border-color: #0f1117;
   transform: scale(1.25);
-  box-shadow: 0 0 0 4px rgba(253,207,65,0.2), 0 0 14px rgba(253,207,65,0.5);
   transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
-  animation: dot-pulse 2s ease-in-out infinite;
+  animation: dot-pulse 1.5s ease-in-out 2 forwards;
 }
 
 @keyframes dot-pulse {
-  0%, 100% { box-shadow: 0 0 0 3px rgba(253,207,65,0.2), 0 0 10px rgba(253,207,65,0.4); }
-  50%       { box-shadow: 0 0 0 7px rgba(253,207,65,0.1), 0 0 20px rgba(253,207,65,0.6); }
+  0%   { box-shadow: 0 0 0 4px rgba(253,207,65,0.25), 0 0 12px rgba(253,207,65,0.45); }
+  50%  { box-shadow: 0 0 0 8px rgba(253,207,65,0.1),  0 0 22px rgba(253,207,65,0.65); }
+  100% { box-shadow: 0 0 0 3px rgba(253,207,65,0.1),  0 0 8px  rgba(253,207,65,0.2);  }
 }
 
 .timeline-dot {
