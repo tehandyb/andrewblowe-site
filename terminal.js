@@ -4,7 +4,7 @@ const LINES = [
   "Ready to find out more?",
 ];
 
-const LETTER_DELAY = 25;
+const LETTER_DELAY = 20;
 
 function typeLine(text, onDone) {
   const div = document.createElement('div');
