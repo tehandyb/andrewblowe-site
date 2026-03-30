@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Andrew Blowe</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-item">home</a>
+    <a href="portfolio.html" class="nav-item active">portfolio</a>
+  </nav>
+
+  <div class="portfolio-page">
+    <h1>Portfolio</h1>
+
+    <div class="section-card" id="capterra-gallery"></div>
+    <div class="section-card" id="barquin-gallery"></div>
+  </div>
+
+  <script src="gallery.js"></script>
+  <script>
+    createGallery('capterra-gallery', [
+      {
+        src: 'images/capterraInlineSearch.jpg',
+        alt: 'Capterra Home page with Inline Search',
+        caption: 'Here shows the inline search that I created for the Capterra home page'
+      },
+      {
+        src: 'images/capterraSpotlight.jpg',
+        alt: 'Capterra Spotlight page',
+        caption: 'This is the Product Spotlight page where I worked heavily on the front end to accomplish our goal of transitioning from Rails + JQuery to AWS Lambda + React'
+      }
+    ], {
+      name: 'Capterra',
+      info: 'Capterra (Gartner Digital Markets), June 2018 - Present',
+      description: 'Transition Rails application to serverless architecture using React and AWS Lambda. Collaborated with design team on creating a React component library to allow more efficient front end development.'
+    });
+
+    createGallery('barquin-gallery', [
+      {
+        src: 'images/eadsForeignAidExplorer.jpg',
+        alt: 'USAID Foreign Aid Explorer',
+        caption: 'This is the Foreign Aid Explorer dashboard. It is an interactive data visualization dashboard that helps inform economists and the general public about how the US is spending Foreign Aid. The dashboard makes use of DC.js and D3.js to power the visualizations and live filtering.'
+      },
+      {
+        src: 'images/eadsDollarsToResults.jpg',
+        alt: 'Dollars to Results',
+        caption: 'This is the Dollars To Results dashboard. It informs the public of the effective benefits that countries receive from US aid. This dashboard makes use of D3.js and React.js'
+      },
+      {
+        src: 'images/eadsCountryDashboard.jpg',
+        alt: 'Foreign Aid by Country',
+        caption: 'This dashboard also shows Foreign Aid, but it gives a closer look at each country. The data visualizations on this dashboard are all bespoke and custom made just as the other dashboards. This dashboard uses D3.js and React.js'
+      }
+    ], {
+      name: 'USAID Economic Analysis and Data Services',
+      info: 'Barquin International, August 2014 - July 2018',
+      description: 'Worked for USAID and the Economic Analysis and Data Services team to build important dashboards to visualize Foreign Aid and Economic data from around the world. We used leading edge Javascript libraries including ReactJs and D3.js for Frontend, Node build tools, Jest and Cucumber for testing, and Ruby on Rails for the backend.'
+    });
+  </script>
+</body>
+</html>
