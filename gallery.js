@@ -1,55 +1,39 @@
-function createGallery(containerId, images, projectInfo) {
-  const section = document.getElementById(containerId);
+function createGallery(containerId, images) {
+  const container = document.getElementById(containerId);
+  container.className = 'gallery-wrapper';
 
-  const galleryContainer = document.createElement('div');
-  galleryContainer.className = 'gallery-container';
+  const thumbsDiv = document.createElement('div');
+  thumbsDiv.className = 'gallery-thumbs';
 
-  const imagesDiv = document.createElement('div');
-  imagesDiv.className = 'gallery-images';
-
-  const captionDiv = document.createElement('div');
-  captionDiv.className = 'gallery-caption';
-  captionDiv.innerHTML = `
-    <h2 class="project-title">${projectInfo.name}</h2>
-    <h4 class="project-info">${projectInfo.info}</h4>
-    <p class="project-description" id="${containerId}-desc">${projectInfo.description}</p>
-  `;
-
-  const descEl = () => document.getElementById(`${containerId}-desc`);
+  const captionEl = document.createElement('p');
+  captionEl.className = 'gallery-caption-text';
 
   function showThumbnails() {
-    imagesDiv.innerHTML = '';
+    thumbsDiv.innerHTML = '';
+    captionEl.textContent = '';
     images.forEach(image => {
-      const thumb = document.createElement('div');
-      thumb.className = 'gallery-thumbnail';
       const img = document.createElement('img');
-      img.className = 'gallery-img';
+      img.className = 'gallery-thumb-img';
       img.src = image.src;
       img.alt = image.alt;
-      img.addEventListener('click', () => showBigImage(image));
-      thumb.appendChild(img);
-      imagesDiv.appendChild(thumb);
+      img.addEventListener('click', () => showBig(image));
+      thumbsDiv.appendChild(img);
     });
-    descEl().textContent = projectInfo.description;
   }
 
-  function showBigImage(image) {
-    imagesDiv.innerHTML = '';
-    const bigDiv = document.createElement('div');
-    bigDiv.className = 'gallery-big';
+  function showBig(image) {
+    thumbsDiv.innerHTML = '';
     const img = document.createElement('img');
-    img.className = 'gallery-img';
+    img.className = 'gallery-big-img';
     img.src = image.src;
     img.alt = image.alt;
+    img.title = 'Click to go back';
     img.addEventListener('click', showThumbnails);
-    bigDiv.appendChild(img);
-    imagesDiv.appendChild(bigDiv);
-    descEl().textContent = image.caption;
+    thumbsDiv.appendChild(img);
+    captionEl.textContent = image.caption;
   }
 
-  galleryContainer.appendChild(imagesDiv);
-  galleryContainer.appendChild(captionDiv);
-  section.appendChild(galleryContainer);
-
+  container.appendChild(thumbsDiv);
+  container.appendChild(captionEl);
   showThumbnails();
 }

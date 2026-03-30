@@ -18,8 +18,140 @@
   <div class="portfolio-page">
     <h1>Portfolio</h1>
 
-    <div class="section-card" id="capterra-gallery"></div>
-    <div class="section-card" id="barquin-gallery"></div>
+    <div class="timeline">
+
+      <!-- Zillow -->
+      <div class="timeline-item">
+        <div class="timeline-dot current"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="company-name">Zillow · Remote</span>
+            <span class="date-badge">2022 – Present</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Senior Software Engineer</span>
+            <span class="role-date">Jul 2023 – Present</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title secondary">Software Development Engineer – Front End</span>
+            <span class="role-date">Jul 2022 – Jul 2023</span>
+          </div>
+          <p class="role-description">
+            Working on the Rich Media Experiences team, building the 3D Home dashboard and media management tools that power Zillow's interactive listing features. Promoted to Senior Software Engineer after one year.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">3D / WebGL</span>
+            <span class="chip">Media Management</span>
+            <span class="chip">Rich Media</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Capterra -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="company-name">Capterra (Gartner Digital Markets) · Arlington, VA</span>
+            <span class="date-badge">2018 – 2022</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Sr. Software Engineer / Lead</span>
+            <span class="role-date">Jun 2018 – Jul 2022</span>
+          </div>
+          <p class="role-description">
+            Led a team of 4 developers to create a React component library for our Design System, using design tokens and Tailwind CSS — accelerating front-end development for a broader team of 30+. Spearheaded transition of the Rails application to a serverless architecture using AWS Lambda and React.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">React</span>
+            <span class="chip">AWS Lambda</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">Design Systems</span>
+            <span class="chip">Design Tokens</span>
+            <span class="chip">Ruby on Rails</span>
+            <span class="chip">Team Lead</span>
+          </div>
+          <div id="capterra-gallery"></div>
+        </div>
+      </div>
+
+      <!-- Barquin -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="company-name">Barquin International · Washington, DC</span>
+            <span class="date-badge">2014 – 2018</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Full Stack Developer</span>
+            <span class="role-date">2014 – Jun 2018</span>
+          </div>
+          <p class="role-description">
+            Built interactive data visualization dashboards for USAID's Economic Analysis and Data Services team, helping economists and the public understand how the US spends foreign aid. Dashboards served live at eads.usaid.gov.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">React</span>
+            <span class="chip">D3.js</span>
+            <span class="chip">DC.js</span>
+            <span class="chip">Ruby on Rails</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Jest</span>
+            <span class="chip">Cucumber</span>
+            <span class="chip">Data Viz</span>
+          </div>
+          <div id="barquin-gallery"></div>
+        </div>
+      </div>
+
+      <!-- AAI Corporation -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="company-name">AAI Corporation</span>
+            <span class="date-badge">2012 – 2014</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">Software Engineer</span>
+            <span class="role-date">Nov 2012 – Aug 2014</span>
+          </div>
+          <p class="role-description">
+            Built an asset tracking application using the Java web framework Vaadin. Collaborated directly with lab engineers to gather requirements and deliver a working internal tool.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Java</span>
+            <span class="chip">Vaadin</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hood College -->
+      <div class="timeline-item">
+        <div class="timeline-dot education"></div>
+        <div class="timeline-card education-card">
+          <div class="timeline-meta">
+            <span class="company-name">Hood College · Frederick, MD</span>
+            <span class="date-badge">2008 – 2012</span>
+          </div>
+          <div class="role-row">
+            <span class="role-title">B.S. Computer Science</span>
+          </div>
+          <p class="role-description">
+            Studied Computer Science with coursework in Java, C++, and Perl. Minored in Web Development. Senior capstone project: built an autonomous drone using off-the-shelf components including a converted RC vehicle.
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Java</span>
+            <span class="chip">C++</span>
+            <span class="chip">Perl</span>
+            <span class="chip">Web Development</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <script src="gallery.js"></script>
@@ -28,40 +160,32 @@
       {
         src: 'images/capterraInlineSearch.jpg',
         alt: 'Capterra Home page with Inline Search',
-        caption: 'Here shows the inline search that I created for the Capterra home page'
+        caption: 'Inline search component I built for the Capterra home page — one of the key pieces of the Rails → serverless transition.'
       },
       {
         src: 'images/capterraSpotlight.jpg',
         alt: 'Capterra Spotlight page',
-        caption: 'This is the Product Spotlight page where I worked heavily on the front end to accomplish our goal of transitioning from Rails + JQuery to AWS Lambda + React'
+        caption: 'The Product Spotlight page, rebuilt from Rails + jQuery to AWS Lambda + React as part of the broader serverless migration.'
       }
-    ], {
-      name: 'Capterra',
-      info: 'Capterra (Gartner Digital Markets), June 2018 - Present',
-      description: 'Transition Rails application to serverless architecture using React and AWS Lambda. Collaborated with design team on creating a React component library to allow more efficient front end development.'
-    });
+    ]);
 
     createGallery('barquin-gallery', [
       {
         src: 'images/eadsForeignAidExplorer.jpg',
         alt: 'USAID Foreign Aid Explorer',
-        caption: 'This is the Foreign Aid Explorer dashboard. It is an interactive data visualization dashboard that helps inform economists and the general public about how the US is spending Foreign Aid. The dashboard makes use of DC.js and D3.js to power the visualizations and live filtering.'
+        caption: 'Foreign Aid Explorer — an interactive dashboard helping the public understand US foreign aid spending. Built with DC.js and D3.js for live filtering across the full dataset.'
       },
       {
         src: 'images/eadsDollarsToResults.jpg',
         alt: 'Dollars to Results',
-        caption: 'This is the Dollars To Results dashboard. It informs the public of the effective benefits that countries receive from US aid. This dashboard makes use of D3.js and React.js'
+        caption: 'Dollars to Results — visualizes the measurable impact of US foreign aid per country. Built with D3.js and React.'
       },
       {
         src: 'images/eadsCountryDashboard.jpg',
         alt: 'Foreign Aid by Country',
-        caption: 'This dashboard also shows Foreign Aid, but it gives a closer look at each country. The data visualizations on this dashboard are all bespoke and custom made just as the other dashboards. This dashboard uses D3.js and React.js'
+        caption: 'Country-level foreign aid dashboard with bespoke D3.js visualizations giving a detailed breakdown of aid by recipient country.'
       }
-    ], {
-      name: 'USAID Economic Analysis and Data Services',
-      info: 'Barquin International, August 2014 - July 2018',
-      description: 'Worked for USAID and the Economic Analysis and Data Services team to build important dashboards to visualize Foreign Aid and Economic data from around the world. We used leading edge Javascript libraries including ReactJs and D3.js for Frontend, Node build tools, Jest and Cucumber for testing, and Ruby on Rails for the backend.'
-    });
+    ]);
   </script>
 </body>
 </html>
