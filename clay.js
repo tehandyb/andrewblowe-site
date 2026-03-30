@@ -154,6 +154,22 @@
     wheel.receiveShadow = true;
     spinGroup.add(wheel);
 
+    // Rotation markers on the wheel top face (make spinning visible)
+    const markMat = new THREE.MeshStandardMaterial({ color: 0x7a4e20, roughness: 0.85 });
+    const wheelTopY = -H - 0.027 + 0.0285;
+
+    // Radial spoke
+    const spokeGeo = new THREE.BoxGeometry(0.62, 0.012, 0.022);
+    const spoke = new THREE.Mesh(spokeGeo, markMat);
+    spoke.position.y = wheelTopY + 0.006;
+    spinGroup.add(spoke);
+
+    // Center hub circle
+    const hubGeo = new THREE.CylinderGeometry(0.055, 0.055, 0.016, 24);
+    const hub = new THREE.Mesh(hubGeo, markMat);
+    hub.position.y = wheelTopY + 0.008;
+    spinGroup.add(hub);
+
     // Ground circle
     const ground = new THREE.Mesh(
       new THREE.CircleGeometry(4, 48),
