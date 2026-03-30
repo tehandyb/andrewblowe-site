@@ -1,7 +1,7 @@
 const LINES = [
   "Hello interweb traveler.",
   "My name is Andrew Blowe, and this is my personal website.",
-  "Ready to find out more?",
+  "Ready to find out more? 🚀",
 ];
 
 const LETTER_DELAY = 20;
